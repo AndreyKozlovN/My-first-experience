@@ -20,6 +20,44 @@ if (personalMovieDB.count < 10) {
         alert("Произошла ошибка");
 }
 
+/*              Вариант и спользованием цикла do, while
+let i = 0;
+do {
+        const a = prompt("Один из последних просмотренных фильмов", ''),
+              b = +prompt("На сколько баллов вы его оцените?", '');
+              i++;
+        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+                personalMovieDB.movie[a] = b; 
+                console.log('done');
+} else {
+        console.log('error');
+        i--;
+}
+}
+while (i < 2);
+
+console.log(personalMovieDB);*/
+
+
+
+/*                    Вариант цикла с использованием while
+let i = 0;
+
+while (i < 2) {
+        const a = prompt("Один из последних просмотренных фильмов", ''),
+              b = +prompt("На сколько баллов вы его оцените?", '');
+              i++;
+        if (a != null && b != null && a != '' && b != '' && a.length < 50) {
+                personalMovieDB.movies[a] = b; 
+                console.log('done');
+        } else {
+                console.log('error');
+                i--;
+        }
+}
+
+console.log(personalMovieDB);*/
+
 
 
 for (let i = 0; i < 2; i++) {
@@ -27,7 +65,7 @@ for (let i = 0; i < 2; i++) {
               b = +prompt("На сколько баллов вы его оцените?", '');
         
         if (a != null && b != null && a != '' && b != '' && a.length < 50) {
-                personalMovieDB[a] = b; 
+                personalMovieDB.movie[a] = b; 
                 console.log('done');
         } else {
                 console.log('error');
